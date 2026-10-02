@@ -1,4 +1,4 @@
-import pyNetLogo
+import pynetlogo as pyNetLogo
 print("✅ pyNetLogo is installed and ready!")
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 netlogo = pyNetLogo.NetLogoLink(gui=False)
 
 # Use filename only (model file must be in same folder)
-netlogo.load_model("flood-abm-clean-rebuild.nlogo")
+netlogo.load_model(r"netlogo\FinalNetlogocompleted.nlogo")
 
 # Settings
 flood_levels = [0.2, 0.4, 0.6, 0.8, 1.0]

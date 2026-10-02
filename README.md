@@ -12,12 +12,13 @@ Tech stack : Python (Pandas, NumPy, OSMnx, Shapely)| NetLogo Simulation Modellin
 > - Captures temporary vs. permanent displacement 
 > -  Exports time-series data (displacement %, cumulative displacement, wealth trajectories, Turtles flooded 2+:  repeat flood counts)
 > - Quantifies displacement dynamics across intensities (0.2 to 1.0)
+> - The model incorporates stochastic rainfall and probabilistic agent behaviour.
 ---
 
 Simulation Screenshot:
 
 Here's the NetLogo interface during a run:
-![Flood ABM Simulation](./ABM%20model%20script%20and%20Netlogo/simulation.gif)
+![Flood ABM Simulation](./images/simulation.gif)
 
 —
 —
