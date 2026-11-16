@@ -45,7 +45,7 @@ def fetch_elevations_batch(locations):
         print("Elevation API error:", response.text)
         return [None] * len(locations)
 
-print("🔼 Fetching elevation...")
+print("Fetching elevation...")
 batch_size = 100
 elevations = []
 for i in range(0, len(df), batch_size):
@@ -61,7 +61,7 @@ df["elevation"] = elevations
 df["rainfall_mm"] = np.random.normal(loc=50, scale=10, size=len(df))
 
 
-print("🌊 Fetching water areas...")
+print("Fetching water areas...")
 api = overpy.Overpass()
 query = f"""
 [out:json][timeout:25];
@@ -96,7 +96,7 @@ for poly in water_polygons:
     df.loc[gdf_grid.geometry.within(poly), "is_water"] = True
 
 
-print("🏠 Downloading OSM GeoJSON data...")
+print("Downloading OSM GeoJSON data...")
 
 try:
     buildings = ox.geometries_from_bbox(max_lat, min_lat, max_lon, min_lon, tags={"building": True})

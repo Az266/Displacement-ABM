@@ -43,7 +43,7 @@ def fetch_elevations_batch(locations):
         print("Elevation API error:", response.text)
         return [None] * len(locations)
 
-print("🔼 Fetching elevation...")
+print("Fetching elevation...")
 batch_size = 100
 elevations = []
 for i in range(0, len(df), batch_size):
@@ -59,7 +59,7 @@ df["elevation"] = elevations
 df["rainfall_mm"] = np.random.normal(loc=50, scale=10, size=len(df))
 
 
-print("🌊 Fetching water areas...")
+print("Fetching water areas...")
 api = overpy.Overpass()
 query = f"""
 [out:json][timeout:25];
@@ -98,7 +98,7 @@ def save_gdf_as_csv(gdf, filename):
     gdf["latitude"] = gdf.geometry.y
     gdf["longitude"] = gdf.geometry.x
     gdf[["latitude", "longitude"]].to_csv(filename, index=False)
-    print(f"✅ Saved CSV: {filename}")
+    print(f"Saved CSV: {filename}")
 
 def save_linestrings_as_csv(gdf, filename):
     rows = []
@@ -107,7 +107,7 @@ def save_linestrings_as_csv(gdf, filename):
             for coord in line.coords:
                 rows.append({"latitude": coord[1], "longitude": coord[0]})
     pd.DataFrame(rows).to_csv(filename, index=False)
-    print(f"✅ Saved LineString CSV: {filename}")
+    print(f"Saved LineString CSV: {filename}")
 
 
 try:
@@ -173,4 +173,4 @@ df = add_proximity_flag(df, shelters, "has_shelter")
 df = add_proximity_flag(df, roads, "near_road")
 
 df.to_csv("abm_full.csv", index=False)
-print("✅ Final CSV saved: abm_full.csv")
+print("Final CSV saved: abm_full.csv")

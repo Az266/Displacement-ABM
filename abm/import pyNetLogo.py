@@ -1,12 +1,12 @@
 import pynetlogo as pyNetLogo
-print("✅ pyNetLogo is installed and ready!")
+print("pyNetLogo is installed and ready!")
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Start NetLogo in headless mode
+# Start NetLogo 
 netlogo = pyNetLogo.NetLogoLink(gui=False)
 
-# Use filename only (model file must be in same folder)
+
 netlogo.load_model(r"netlogo\FinalNetlogocompleted.nlogo")
 
 # Settings
@@ -48,7 +48,7 @@ df = pd.DataFrame(results)
 print(df)
 df.to_csv("flood_abm_results.csv", index=False)
 
-# === 📊 Plotting ===
+# = Plotting ===
 plt.figure(figsize=(10, 6))
 
 # 1. Max % Displaced

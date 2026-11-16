@@ -6,7 +6,7 @@ This project combines Python with a NetLogo-based simulation to explore resilien
 
 Tech stack : Python (Pandas, NumPy, OSMnx, Shapely)| NetLogo Simulation Modelling |Geospatial Analysis 
 
-## 🚀 Core Features
+## Core Features
 > - Built a 50 km² spatial ABM with real-world elevation, roads, rainfall & household agents
 > - Agents with wealth, displacement state, flood history, and relocation logic 
 > - Captures temporary vs. permanent displacement 
