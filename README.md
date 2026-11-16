@@ -13,15 +13,29 @@ Tech stack : Python (Pandas, NumPy, OSMnx, Shapely)| NetLogo Simulation Modellin
 > -  Exports time-series data (displacement %, cumulative displacement, wealth trajectories, Turtles flooded 2+:  repeat flood counts)
 > - Quantifies displacement dynamics across intensities (0.2 to 1.0)
 > - The model incorporates stochastic rainfall and probabilistic agent behaviour.
----
+----
 
 Simulation Screenshot:
 
 Here's the NetLogo interface during a run:
 ![Flood ABM Simulation](./images/simulation.gif)
 
-—
-—
+----
+### Simulation Model Key
+
+The model key illustrates the colour-coded household states (turtles) and terrain types (patches) used in the NetLogo simulation, distinguishing household displacement statuses and environmental conditions.
+
+<details>
+<summary>View Simulation Model Key</summary>
+
+<br>
+
+<img src="./abm/Keynotes.png" alt="Simulation Model Key" width="300">
+
+</details>
+
+
+## Project Overview
 
 ## Project Overview:
 
@@ -60,7 +74,7 @@ Built full pipeline for this project:
 ### Simulation results:
 The agent-based model was run across multiple flood intensity scenarios. 
  
-  ![Flood ABM Simulation](./ABM%20model%20script%20and%20Netlogo/simulation2.png)
+ ![Flood ABM Simulation](./images/simulation2.png)
 
 ### Key Insights & Conclusion:
 
@@ -71,6 +85,7 @@ The model revealed a non-linear relationship between flood intensity and long-te
 
 —
 The model emphasises that the time and design of aid interventions has a significant impact on resilience, underscoring the need for strategic resource allocation to reducing long-term displacement. 
+
 
 ## Data Sources
 
